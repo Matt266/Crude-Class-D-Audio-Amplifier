@@ -90,13 +90,13 @@
   of current flowing through the load. This means the load sees a +12V and a -12V connection - the amplitude just got doubled.
   
   Switching MOSFETs at high speeds is a tough job as gate capacitance requires a higher current flow in order to turn the Transistor on and off fast enough. Normally for
-  such a purpose Driver ICs are available. But since 200KHz are relatively slow and didn't want to use any "unnecessary" IC I decided to to build the driving circuit myself.
+  such a purpose Driver ICs are available. But since 200KHz are relatively slow and didn't want to use any "unnecessary" IC I decided to build the driving circuit myself.
   
   In the end this is the schematic I came up with:
   ![crude class-d amp](/images/output_stage.jpg)
   
-  The two comparatores mentioned in the ADC description already give me to signals inverted to each other so that I already got my signal for driving both bridge sides.
-  As the current output of those comparators is way to small to sufficiently switch the MOSFETs I amplfied this signal with two BJT amplification stages. 
+  The two comparatores mentioned in the ADC description already give me to signals inverted to each other so that I got my signals for driving both bridge sides.
+  As the current output of those comparators is way to small to sufficiently switch the MOSFETs I amplfied these signals with two BJT amplification stages. 
   The first one (q5 and q6 on the complete schematic) are simple common emitter amplfifiers and as such don't need further mention and are not visible on the part of the
   schematic above.
   The second stage where I used BD139 transistors to be able to handle higher currents is also a common emitter amplifier but with some tricks to be mentionend:
