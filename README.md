@@ -90,7 +90,7 @@
   of current flowing through the load. This means the load sees a +12V and a -12V connection - the amplitude just got doubled.
   
   Switching MOSFETs at high speeds is a tough job as gate capacitance requires a higher current flow in order to turn the Transistor on and off fast enough. Normally for
-  such a purpose Driver ICs are avaiable. But since 200KHz are relatively slow and didn't want to use any "unnecessary" IC I decided to to build the driving circuit myself.
+  such a purpose Driver ICs are available. But since 200KHz are relatively slow and didn't want to use any "unnecessary" IC I decided to to build the driving circuit myself.
   
   In the end this is the schematic I came up with:
   ![crude class-d amp](/images/output_stage.jpg)
