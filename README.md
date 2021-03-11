@@ -41,11 +41,24 @@
 ### Filters
   First things first I omitted the filters. The input filter would be needed to protect for any noise - as my input signal is rather clear and I epexted my design
   to introduce a lot of distortion due to the unsuited components available and my lack in experience and knowledge it wouldn't improve the quality and be useless
-  anyway. The ouput filter will filter out the high frequency content of the pwm signal - as this frequency is way to high to be heard with 200kHz (I didn't have 
+  anyway. The ouput filter will filter out the high frequency content of the pwm signal - as this frequency is way to high to be heard with 200kHz (I hadn't 
   chosen a fixed  frequency yet but knew it would be at least that high) I omitted this filter too. There are other reasons for applying the lowpass like avoid
   possible damage to the speakers, EMI, etc. which I also ignored for this project.
  
 ### Analog-Digital Converter
-  ![crude class-d amp](/images/ADC_Input_stage.emf)
+  To convert the input signal into a pwm signal a comparator (which is one of three integrated circuits I ended up using) compares it with a triangle or sawtooth wave.
+  The higher a point of the audio signal is in amplitude/voltage the longer the output of the comparator stays high as a higher percentage of the triangle or sawtooth wave
+  is below that value. There are two comparators fed by the audio and triangle signal with the inverting and noninverting input switched. This generates the required
+  opposite switching signal for the H-Brigde I use as the main amplifier - this part of the circuit will be discussed in a moment.
+  
+  This is a 2KHz sinewave I used as test signal for simulation with the corresponding triangle wave:
+  ![crude class-d amp](/images/ADC_Input_stage_waveform_input.jpg)
+  
+  And this is the resulting output of one of the comparators:
+  ![crude class-d amp](/images/ADC_Input_stage_waveform_output.jpg)
+  
+  Beside the clearly visible distortion that is introduced by the circuit during conversion one can also see the remaining sine wave in the output signal.
+  
+  ![crude class-d amp](/images/ADC_Input_stage.jpg)
 ### Amplification stage
   
