@@ -27,10 +27,10 @@
   it to amplifiy the complete fullwave in the linear region and without clipping). Also the amplification of the digital Signals itself is much more 
   efficient than an analog amplification. And at last I don't have to fine tune DC-biasing and component values in order to fight crossover distortion which 
   is a present problem in Class-B and C amplifiers. Calculating a good Class A, B or C design would have been beyond my possiblities at this time and 
-  as just copying values from internet resources would have violated the restrictions I gave myself the Class-D design was a clear topoligy choice.
+  as just copying values from internet resources would have violated the restrictions I gave myself. The Class-D design was a clear topoligy choice.
   
 ## Concept
-  The basic concept of the Class-D design I choose is rather simple:
+  The basic concept of the Class-D design I chose is rather simple:
   1. The analog audio is filtered and converted to a pwm signal with changing duty cycle (this might sound like a complex conversion but really is easy to do)
   2. then the digital pwm signal is amplified through the output stage
   3. the high frequency pwm signal still contains the low frequency information which therefore can be extracted by lowpassing the output signal
