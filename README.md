@@ -131,7 +131,8 @@
     
    This is the complete schematic:
     ![crude class-d amp](/images/class_d_amp.jpg)
-    
+   
+ # Conclusion
    After finally adding a LDO-Regulator (the third IC used) for the 5V regions of the circuit, soldering the circuit, troubleshooting a lot of mistakes I made during this          procedure and changing the pull-ups to the value of 1 kilo ohm the amplifier finally **worked**!! Sadly the amplification is too low and the noise / distortion 
    too high to really use this amplifier (a Class-A pre amp would also help the design) but I'm happy I could bring this circuit to life. 
     
