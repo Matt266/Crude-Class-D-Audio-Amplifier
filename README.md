@@ -13,7 +13,7 @@
   is suboptimal and could be improved by using more suitable components (e.g. MOSFETs with lower on resistance).
   So for simulating the circuit I downloaded the corresponding models or used components with similiar charackteristics.
   
-  ![crude class-d amp](/images/class_d_amp.jpg)
+  ![crude class-d amp](/images/class_d_amp_pcb.jpg)
   
 ## Choosing an amplifier topology
   For the basic ampflifier conecept there are a few topoligies to choose from.
