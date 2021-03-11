@@ -50,6 +50,7 @@
   The higher a point of the audio signal is in amplitude/voltage the longer the output of the comparator stays high as a higher percentage of the triangle or sawtooth wave
   is below that value. There are two comparators fed by the audio and triangle signal with the inverting and noninverting input switched. This generates the required
   opposite switching signal for the H-Brigde I use as the main amplifier - this part of the circuit will be discussed in a moment.
+  ![crude class-d amp](/images/ADC_Input_stage.jpg)
   
   This is a 2KHz sinewave I used as test signal for simulation with the corresponding triangle wave:
   ![crude class-d amp](/images/ADC_Input_stage_waveform_input.jpg)
@@ -58,7 +59,25 @@
   ![crude class-d amp](/images/ADC_Input_stage_waveform_output.jpg)
   
   Beside the clearly visible distortion that is introduced by the circuit during conversion one can also see the remaining sine wave in the output signal.
+  This is the triangle oscillator:
+  ![crude class-d amp](/images/tri_oscillator.jpg)
   
-  ![crude class-d amp](/images/ADC_Input_stage.jpg)
+  I decided to go for a triangle wave as it was easier for me to achieve a linear tri wave than a sawtooth (mainly because of the one very steep edge).
+  A relaxation oscillator produces a square wave which serves as input signal for two opposite current mirros. One mirror charges a capacitor during one half
+  of the square singal while the other discharges it  on the other. If the relaxation oscillator would directly charge the capacitor a pseudo tri wave could be
+  seen. The capacitor would charge and discharge exponentially as the rising/sinking voltage across it would slow the process. By using current mirrors the voltage
+  on the square oscillator side remains constant during the charging process and with this also the input current remains the same. Now the current mirrors force
+  this constant current in/out of the cpacitor thus charging it linear - which even though i didn't match any of the transistors or resistors did work surprisingly
+  well in real circuit.
+  
+  This image shows the square wave and the resulting triangle wave:
+  ![crude class-d amp](/images/tri_oscillator_waveform.jpg)
+  
+  So why did I use the NE555 while an relaxation oscillator could be built discrete? I honestly wasn't able to calculate and thus design the schmitt trigger 
+  for replacing the 555 timer with the knowledge I had gained so far. Same goes for voltage divider I used for DC-offseting the trianglewave after decoupling
+  it as input for the comparator. Using two resistors with the same value to offset it to half of the supply voltage dind't work - I don't know why. I just tweaked
+  the values until I found a sweet spot.
+  
+  
 ### Amplification stage
   
