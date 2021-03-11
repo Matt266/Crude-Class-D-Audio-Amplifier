@@ -68,16 +68,16 @@
   seen. The capacitor would charge and discharge exponentially as the rising/sinking voltage across it would slow the process. By using current mirrors the voltage
   on the square oscillator side remains constant during the charging process and with this also the input current remains the same. Now the current mirrors force
   this constant current in/out of the cpacitor thus charging it linear - which even though i didn't match any of the transistors or resistors did work surprisingly
-  well in real circuit.
+  well in the real circuit.
   
   This image shows the square wave and the resulting triangle wave:
   ![crude class-d amp](/images/tri_oscillator_waveform.jpg)
   
   So why did I use the NE555 while an relaxation oscillator could be built discrete? I honestly wasn't able to calculate and thus design the schmitt trigger 
-  for replacing the 555 timer with the knowledge I had gained so far. Same goes for voltage divider I used for DC-offseting the trianglewave after decoupling
+  for replacing the 555 timer with the knowledge I had gained so far. Same goes for the voltage divider I used for DC-offseting the trianglewave after decoupling
   it as input for the comparator. Using two resistors with the same value to offset it to half of the supply voltage dind't work - I don't know why. I just tweaked
   the values until I found a sweet spot.
   
-  
 ### Amplification stage
   
+  For amplification I had the choise between a half-bridge or H-bridge topology.
