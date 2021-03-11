@@ -40,11 +40,11 @@
   
 ### Filters
   First things first I omitted the filters. The input filter would be needed to protect for any noise - as my input signal is rather clear and I epexted my design
-  to introduce a lot of distortion due to the unsuited components available and my lack in experience and knowledge. The ouput filter will filter out the high
-  frequency content of the pwm signal - as this frequency is way to high to be heard with 200kHz (I didn't have chosen a fixed frequency yet but knew it would be
-  at least that high) I omitted this filter too. There are other reasons for applying the lowpass like avoid possible damage to the speakers, EMI, etc. which I
-  also ignored for this project.
-  
+  to introduce a lot of distortion due to the unsuited components available and my lack in experience and knowledge it wouldn't improve the quality and be useless
+  anyway. The ouput filter will filter out the high frequency content of the pwm signal - as this frequency is way to high to be heard with 200kHz (I didn't have 
+  chosen a fixed  frequency yet but knew it would be at least that high) I omitted this filter too. There are other reasons for applying the lowpass like avoid
+  possible damage to the speakers, EMI, etc. which I also ignored for this project.
+ 
 ### Analog-Digital Converter
   ![crude class-d amp](/images/ADC_Input_stage.emf)
 ### Amplification stage
